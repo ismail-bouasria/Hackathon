@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+/*import logo from './logo.svg';
 import './App.css';
 
 function App() {
@@ -19,6 +19,16 @@ function App() {
         </a>
       </header>
     </div>
+  );
+}
+
+export default App;*/
+import React from 'react';
+import Display from './screen/CoordinatesScreen';
+
+function App() {
+  return (
+      <Display />
   );
 }
 
