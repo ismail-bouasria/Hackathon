@@ -1,25 +1,23 @@
-import logo from './logo.svg';
+import React from 'react';
+import qrCode from './QRCode.png';
+import logo from './logo.png';
 import './App.css';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
+    <div className="App-header">
+      <div>
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <h1 className="App-h1">See-Tickets</h1>
+      </div>
+      <div className="App-QRCode">
+        <img src={qrCode} alt="QRCode" />
+      </div>
     </div>
   );
 }
 
 export default App;
+
+
