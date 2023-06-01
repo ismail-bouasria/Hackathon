@@ -35,6 +35,49 @@ function FormRegister() {
         return false;
     } else {
         errorEmailConfirm.innerHTML = "";
+        function handleFormSubmit(event) {
+            event.preventDefault();
+          
+            // Récupérer les valeurs du formulaire
+            const firstName = ' '; // Remplacez par la valeur réelle
+            const lastName = ' '; // Remplacez par la valeur réelle
+            const civility = 'mr'; // Remplacez par la valeur réelle
+            const email = event.target.elements.email.value;
+            const login = email; // Utilisez la même valeur que l'e-mail
+            const password = ' '; // Remplacez par la valeur réelle
+          
+            // Créer l'objet FormData
+            const formData = {
+              firstName: firstName,
+              lastName: lastName,
+              civility: civility,
+              email: email,
+              login: login,
+              password: password,
+            };
+          
+            // Envoyer la requête POST avec axios
+            axios
+              .post(
+                "https://front.apirecette.digitick-ppe.com/v1.1/user/users",
+                formData,
+                {
+                  headers: {
+                    accept: "application/hal+json",
+                    Authorization: "Bearer 33af5160709b0cb2de4594941d13918823ca72a6",
+                    "Content-Type": "application/json",
+                  },
+                }
+              )
+              .then((response) => {
+                setPost(response.data);
+                // Faites quelque chose avec les données de réponse si nécessaire
+              })
+              .catch((error) => {
+                console.log(error);
+                // Traitez les erreurs de la requête si nécessaire
+              });
+            }
         console.log('Votre compte a été créé');
         const button = document.getElementById("buttonRegisterForm");
         button.innerHTML = "Compte créé";
