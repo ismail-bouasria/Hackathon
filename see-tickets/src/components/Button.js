@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import FormRegister from "./FormRegister";
 
-function ToggleButton() {
+function ToggleButton(type) {
   const [isFormVisible, setFormVisible] = useState(false);
 
   const handleToggle = () => {
@@ -21,8 +21,7 @@ return (
       <div className="flex flex-row items-center">
         <div id="coordonnéesNumber">
           <p className="text-[#E9E9E9] px-[0.6em] rounded-full bg-[#8A898A] text-lg font-bold"
-            id="number_2"
-          >2</p>
+            id="number_2">2</p>
         </div>
         <button
           className="flex items-center justify-between toggle-button p-2 w-full font-bold"
