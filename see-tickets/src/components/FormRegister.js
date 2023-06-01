@@ -68,8 +68,7 @@ return (
         <div className="flex justify-center">
           <button
             type="submit" id="buttonRegisterForm"
-            className="bg-[#727272] hover:bg-[#c9026f] text-white font-bold w-full py-3 rounded-full"
-            disabled >
+            className="bg-[#ff008c] hover:bg-[#c9026f] text-white font-bold w-full py-3 rounded-full">
             Suivant
           </button>
         </div>
