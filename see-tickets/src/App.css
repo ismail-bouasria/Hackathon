@@ -1,5 +1,23 @@
-.App {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .Container {
   text-align: center;
+  background-color: #EBEAEB;
+  color: black;
+}
+.InfoOrder{
+  background-color: #FEFEFF;
+  color: black;
+}
+.Buttons{
+  display: flex;
+  flex-direction: column;
+  background-color: #FEFEFF;
+} 
+.BtnTelecharger{
+  background-color: #E5017C;
 }
 
 .App-logo {
@@ -35,4 +53,4 @@
   to {
     transform: rotate(360deg);
   }
-}
+} */
