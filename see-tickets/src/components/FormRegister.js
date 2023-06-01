@@ -9,11 +9,12 @@ function FormRegister() {
     return regex.test(email);
   }
 
-  function validateEmailConfirm(email, emailConfirm) {
+    function validateEmailConfirm(email, emailConfirm) {
     return email === emailConfirm;
-  }
 
-  function handleFormSubmit(event) {
+}
+
+    function handleFormSubmit(event) {
     event.preventDefault();
     const formRegister = document.getElementById("formRegister");
     const email = event.target.elements.email.value;
@@ -22,42 +23,27 @@ function FormRegister() {
     let errorEmailConfirm = document.getElementById("errorEmailConfirm");
 
     if (!validateEmail(email)) {
-      errorEmail.innerHTML = "Veuillez entrer une adresse e-mail valide.";
-      return false;
+        errorEmail.innerHTML = "Veuillez entrer une adresse e-mail valide.";
+        return false;
     } else {
-      errorEmail.innerHTML = "";
+        errorEmail.innerHTML = "";
     }
 
     if (!validateEmailConfirm(email, emailConfirm)) {
-      errorEmailConfirm.innerHTML =
-        "Veuillez entrer une adresse e-mail identique.";
-      return false;
+        errorEmailConfirm.innerHTML =
+            "Veuillez entrer une adresse e-mail identique.";
+        return false;
     } else {
-      errorEmailConfirm.innerHTML = "";
-      axios
-        .post(
-          "https://front.apirecette.digitick-ppe.com/v1.1/authorization/token",
-          new FormData(formRegister),
-          {
-            headers: {
-              Authorization: "Bearer be3c2ac9d4f90aefa837413a900e6317a7db72df",
-            },
-          }
-        )
-        .then((response) => {
-          setPost(response.data);
-          // Faites quelque chose avec les données de réponse si nécessaire
-        })
-        .catch((error) => {
-          console.log(error);
-          // Traitez les erreurs de la requête si nécessaire
-        });
+        errorEmailConfirm.innerHTML = "";
+        console.log('Votre compte a été créé');
+        const button = document.getElementById("buttonRegisterForm");
+        button.innerHTML = "Compte créé";
     }
-  }
+}
 
-  return (
+return (
     <div className="rounded-lg bg-[#FDFDFD] p-4">
-      <div className="mb-2">
+      <div className="mb-3">
         <p>
           <span>Ajouter votre adresse e-mail pour recevoir ton billet.</span>
         </p>
@@ -81,10 +67,10 @@ function FormRegister() {
         </div>
         <div className="flex justify-center">
           <button
-            type="submit"
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-          >
-            Valider
+            type="submit" id="buttonRegisterForm"
+            className="bg-[#727272] hover:bg-[#c9026f] text-white font-bold w-full py-3 rounded-full"
+            disabled >
+            Suivant
           </button>
         </div>
       </form>
