@@ -16,8 +16,7 @@ function App() {
       <div className="App-QRCode">
         <img src={qrCode} alt="QRCode" />
       </div>
-      
-      <EventRatesScreen />
+        <EventRatesScreen />
  
     </div>
   );
