@@ -2,6 +2,9 @@ import React from 'react';
 import qrCode from './QRCode.png';
 import logo from './logo.png';
 import EventRatesScreen from './screen/EventRatesScreen';
+import React from 'react';
+import qrCode from './QRCode.png';
+import logo from './logo.png';
 import './App.css';
 
 
@@ -16,8 +19,7 @@ function App() {
       <div className="App-QRCode">
         <img src={qrCode} alt="QRCode" />
       </div>
-        <EventRatesScreen />
- 
+      <EventRatesScreen />
     </div>
   );
 }
