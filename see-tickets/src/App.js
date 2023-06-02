@@ -1,15 +1,23 @@
-import EventRatesScreen from './screen/EventRatesScreen';
+
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+
 import './App.css';
+import Eventlist from './screen/EventlistScreen'
+import TestRouter from './component/event';
+
+
 
 function App() {
 
   return (
-    <div className=" bg-gray-400 w-screen h-screen flex">
- 
-        
-      <EventRatesScreen />
 
-    </div>
+      <BrowserRouter>
+      <Routes>
+        <Route index element={<Eventlist />}/>
+        <Route path="/event" element={<TestRouter />}/>
+
+      </Routes>
+      </BrowserRouter>
   );
 }
 
