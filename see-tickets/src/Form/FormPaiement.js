@@ -59,7 +59,7 @@ const FormulairePaiement = () => {
 
                     <div className='space-y-4'>
                         <div className='flex space-x-2'>
-            <span className='rounded-full  flex h-4  w-4 items-center mt-1  px-[0.1em] bg-[#00974a] '><svg xmlns="http://www.w3.org/2000/svg" class="h-3 w-3" viewBox="0 0 448 512">
+            <span className='rounded-full  flex h-4  w-4 items-center mt-1  px-[0.1em] bg-[#00974a] '><svg xmlns="http://www.w3.org/2000/svg" className="h-3 w-3" viewBox="0 0 448 512">
                  <path fill="#ffffff" d="M438.6 105.4c12.5 12.5 12.5 32.8 0 45.3l-256 256c-12.5 12.5-32.8 12.5-45.3 0l-128-128c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0L160 338.7 393.4 105.4c12.5-12.5 32.8-12.5 45.3 0z"/>
             </svg></span>
                             <h2 className='text-black font-bold '>Payement sécuriser</h2>
