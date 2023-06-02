@@ -1,6 +1,43 @@
+import React, { useEffect, useState, Link}  from "react";
+import axios from "axios";
 import { AiFillInfoCircle } from "react-icons/ai";
 
+const [data, setData] = useState([]);
+
 function EventRatesScreen() {
+  const token = "74b858535bb07405da0bda9e0a21ba2f8c32456e";
+  const url = "https://front.apirecette.digitick-ppe.com/v1.1/distribution/salesChannels/13357/shows/9528639/prices?limit=10&offset=0&lang=fr";
+  useEffect (() => {
+    axios.get(url, {
+      headers: {
+        'Accept': 'application/hal+json',
+        'Authorization': `Bearer ${token}`
+      }
+    })
+    .then (resp => {
+      console.log(resp.data);
+    })
+    .catch(error => {
+      console.log(error);
+    })
+
+    {data.length > 0 ? (
+      data.map((item, index) => (
+        <div className='m-4 flex content-center my-10' key={index}>
+          <div className='bg-white rounded-xl'>
+            <Link to={`/shows/${item.eventId}`}>
+              <img src="https://media.istockphoto.com/id/501387734/fr/photo/danse-des-amis.jpg?s=612x612&w=0&k=20&c=uS-chxCnjK2DWqlUbT2qEp9yLzCp_3Q1PZq8XCbc99E=" alt="alt" className='w-screen rounded-t-xl'></img>
+            </Link>
+            <p className='text-black text-2xl'>{item.eventName}</p>
+            <p className='text-black'>{item.dateStart}</p>
+          </div>
+        </div>
+      ))
+    ) : (
+      <p>noresults</p>
+    )}
+
+  })
   return (
     <div className=" bg-gray-300 w-screen h-screen flex justify-center">
       <div className="flex flex-col h-screen w-screen m-5">
