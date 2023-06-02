@@ -1,14 +1,18 @@
 import validate from "../asset/validate.png";
 import BtnTelecharger from "../component/button/BtnTelecharger";
 import BtnNewOrder from "../component/button/BtnNewOrder";
+import ReadTicketListPDf from "../component/fetch/ReadTickets";
+import BtnLanguage from "../component/button/BtnLanguage"
 
 function Text() {
   return (
-<div className="flex flex-col justify-center w-100 items-center">
+
+<div className="flex flex-col justify-center w-100 items-center mx-5 mt-14 rounded-md">
   <img className="h-20 w-20 mt-4 mb-4" src={validate} alt="logo" />
   <div className="flex flex-col items-center mb-4">
-    <h1 className="text-2xl mb-2">Merci pour votre commande</h1>
+    <h1 className=" text-center text-5xl mb-2">Merci pour votre commande</h1>
     <p className="mb-2">votre@adressMail.com</p>
+     <ReadTicketListPDf /> 
     <p className="text-center mb-4 font-light">
       Retrouvez vos billets par mail ou sur cette page en les téléchargeant
     </p>
@@ -17,7 +21,7 @@ function Text() {
     <BtnTelecharger />
     <BtnNewOrder />
   </div>
-  <p className="ml-auto mt-4 md:ml-auto md:mt-0 md:absolute md:bottom-0 md:left-0 md:right-0 md:text-center  ">
+  <p className="mt-4 ml-auto md:mx-auto md:w-3/4">
     Powered by: See Tickets
   </p>
 </div>
