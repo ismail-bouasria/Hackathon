@@ -7,7 +7,6 @@ function FormRegister() {
         const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         return regex.test(email);
     }
-
     function validateEmailConfirm(email, emailConfirm) {
         return email === emailConfirm;
     }
@@ -16,19 +15,23 @@ function FormRegister() {
     const formRegister = document.getElementById("formRegister");
     const email = event.target.elements.email.value;
     const emailConfirm = event.target.elements.email_confirm.value;
+    const borderEmail = document.getElementById("email");
+    const borderEmailConfirm = document.getElementById("email_confirm");
     let errorEmail = document.getElementById("errorEmail");
     let errorEmailConfirm = document.getElementById("errorEmailConfirm");
 
     if (!validateEmail(email)) {
+        borderEmail.classList.remove("border-[#cfcfcf]");
+        borderEmail.classList.add("border-red-500");
         errorEmail.innerHTML = "Veuillez entrer une adresse e-mail valide.";
+        errorEmail.classList.add("text-red-500");
         return false;
     } else {
         errorEmail.innerHTML = "";
     }
 
     if (!validateEmailConfirm(email, emailConfirm)) {
-        errorEmailConfirm.innerHTML =
-            "Veuillez entrer une adresse e-mail identique.";
+        errorEmailConfirm.innerHTML = "Veuillez entrer une adresse e-mail identique.";
         return false;
     } else {
         errorEmailConfirm.innerHTML = "";
@@ -85,6 +88,7 @@ return (
             type="text"
             name="email"
             placeholder="E-mail"
+            id={"email"}
             className="rounded-lg p-2 bg-[#eeeeee] border border-[#cfcfcf]"
             />
             <small id="errorEmail" className="h-4"></small>
@@ -92,6 +96,7 @@ return (
             type="text"
             name="email_confirm"
             placeholder="Confirmer votre E-mail"
+            id={"email_confirm"}
             className="rounded-lg p-2 bg-[#eeeeee] border border-[#cfcfcf]"
             />
             <small id="errorEmailConfirm" className="h-4"></small>

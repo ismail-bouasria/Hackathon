@@ -35,9 +35,6 @@ return (
             </svg>
           </div>
         </button>
-        <div>
-
-        </div>
       </div>
       {isFormVisible && <FormRegister />}
     </div>
