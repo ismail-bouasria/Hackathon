@@ -1,29 +1,23 @@
-import React from 'react';
-import qrCode from './QRCode.png';
-import logo from './logo.png';
-import EventRatesScreen from './screen/EventRatesScreen';
-import React from 'react';
-import qrCode from './QRCode.png';
-import logo from './logo.png';
-import './App.css';
-
+import React from "react";
+import HomeScreen from "./screen/homeScreen/Home";
+import EventRatesScreen from "./screen/eventRatesScreen/EventRates";
+import EventlistScreen from "./screen/eventlistScreen/Eventlist";
+import CoordinatesScreen  from "./screen/CoordinatesScreen/Coordinates";
+import ValidateScreen from "./screen/validationPageScreen/ValidationPage";
+import PaymentScreen from "./screen/paymentScreen/Paiement";
+import "./App.css";
 
 function App() {
-
   return (
-    <div className="App-header">
-      <div>
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1 className="App-h1">See-Tickets</h1>
-      </div>
-      <div className="App-QRCode">
-        <img src={qrCode} alt="QRCode" />
-      </div>
+    <div>
+      <HomeScreen />
+      <EventlistScreen /> 
       <EventRatesScreen />
+      <CoordinatesScreen /> 
+      <PaymentScreen />
+      <ValidateScreen />
     </div>
   );
 }
 
 export default App;
-
-
