@@ -12,7 +12,7 @@ function App() {
     <div>
       <HomeScreen />
       <EventlistScreen /> 
-      <EventRatesScreen />
+      <EventRatesScreen /> 
       <CoordinatesScreen /> 
       <PaymentScreen />
       <ValidateScreen />
