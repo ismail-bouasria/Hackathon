@@ -1,3 +1,5 @@
+import './App.css';
+import Text from './screen/ValidationPageScreen';
 
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
@@ -10,8 +12,13 @@ import TestRouter from './component/event';
 function App() {
 
   return (
+     
 
-      <BrowserRouter>
+    
+    
+    
+    <BrowserRouter>
+    <Text /> 
       <Routes>
         <Route index element={<Eventlist />}/>
         <Route path="/event" element={<TestRouter />}/>
