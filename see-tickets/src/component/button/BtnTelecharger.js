@@ -1,4 +1,7 @@
-import billetExemple from "../../asset/billetExemple.pdf"
+
+import billetExemple from "../../assets/image/billetExemple.pdf"
+
+
 
 
 function BtnTelecharger () {
@@ -9,7 +12,9 @@ function BtnTelecharger () {
         target="_blank"
         rel="noreferrer"
       >
+
         <button className="w-80 h-12 text-white text-2xl bg-pink-600 font-bold rounded-lg " >Télécharger</button>
+
   </a>
   );
 }
