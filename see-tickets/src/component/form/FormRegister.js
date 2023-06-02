@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom';
 
 
 function FormRegister() {
@@ -67,6 +68,7 @@ function FormRegister() {
                 });*/
             
         console.log('Votre compte a été créé');
+        
         const button = document.getElementById("buttonRegisterForm");
         button.innerHTML = "Compte créé";
     }
@@ -97,11 +99,13 @@ return (
             <small id="errorEmailConfirm" className="h-4"></small>
         </div>
         <div className="flex justify-center">
+        <Link to={`/payment/`}>
             <button
             type="submit" id="buttonRegisterForm"
             className="bg-[#ff008c] hover:bg-[#c9026f] text-white font-bold w-full py-3 rounded-full">
             Suivant
             </button>
+            </Link>
         </div>
         </form>
     </div>

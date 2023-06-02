@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const FormulairePaiement = () => {
     return (
@@ -70,12 +71,14 @@ const FormulairePaiement = () => {
                         </div>
                     </div>
                 </div>
+                <Link to={`/validate`}>
                 <button
                     type="submit"
-                    className="bg-mediumvioletred hover:bg-purple-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
+                    className="bg-mediumvioletred bg-purple-600 text-white font-bold py-2 px-4 rounded-full w-full focus:outline-none focus:shadow-outline"
                 >
                     Payer
                 </button>
+                </Link>
             </form>
         </div>
     );
