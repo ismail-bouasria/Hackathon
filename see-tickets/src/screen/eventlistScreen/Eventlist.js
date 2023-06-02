@@ -6,7 +6,7 @@ export default function Eventlist() {
 
   useEffect(() => {
     const url = 'https://front.apirecette.digitick-ppe.com/v1.1/distribution/salesChannels/13357/calendar/day/2023-06-02?lang=fr';
-    const token = 'edad0efd1f63dcc7e22086c004f20d3e07290b7c';
+    const token = '0ebd4ddc0420cc8ad1d6e2eacaf22909431a773c';
 
     const getEvents = async () => {
       try {
