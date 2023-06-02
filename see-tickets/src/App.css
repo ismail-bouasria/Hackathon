@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .App {
   text-align: center;
 }
@@ -27,6 +28,8 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+
+
 
 .App-link {
   color: #61dafb;
